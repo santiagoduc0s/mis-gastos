@@ -45,6 +45,7 @@ export const Column: React.FC<ColumnProps> = ({ column, expenses, index }) => {
                 {...providedDrag.dragHandleProps}
                 ref={providedDrag.innerRef}
               >
+                
                 <div className="text-center py-2 border-b-2">
                   <p className="text-md">{column.title}</p>
                 </div>
