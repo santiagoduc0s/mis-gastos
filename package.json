@@ -1,5 +1,5 @@
 {
-  "name": "mis_gatos_next",
+  "name": "mis_gastos_next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,17 +9,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hello-pangea/dnd": "^16.3.0",
+    "@nextui-org/react": "^2.0.16",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "chart.js": "^4.3.3",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
+    "filepond": "^4.30.4",
+    "framer-motion": "^10.15.1",
     "next": "13.4.13",
+    "papaparse": "^5.4.1",
     "postcss": "8.4.27",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
+    "react-filepond": "^7.1.2",
+    "react-redux": "^8.1.2",
+    "redux": "^4.2.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.3.7"
   }
 }
