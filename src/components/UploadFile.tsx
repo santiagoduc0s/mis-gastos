@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { FilePond } from "react-filepond";
-import { FilePondFile } from "filepond";
+import { ActualFileObject, FilePondFile, FilePondInitialFile } from "filepond";
 import "filepond/dist/filepond.min.css";
 
 import Papa from "papaparse";
@@ -14,12 +14,15 @@ import { Expense } from "@/entities/Expense";
 import { setExpenses } from "@/store/slices";
 
 export default function UploadFile() {
-  const [files, setFiles] = useState([]);
+  // const [files, setFiles] = useState([]);
+  const [files, setFiles] = useState<FilePondFile[]>([]);
+
 
   const dispatch = useAppDispatch();
   const { board } = useAppSelector((state) => state.board);
 
   const handleUploadFile = (files: FilePondFile[]) => {
+    
     setFiles(files);
 
     if (files.length > 0) {
@@ -55,7 +58,8 @@ export default function UploadFile() {
   return (
     <div className="App">
       <FilePond
-        files={files}
+        files={files as unknown as (string | FilePondInitialFile | Blob | ActualFileObject)[]}
+        // files={files as (string | FilePondInitialFile | Blob | ActualFileObject)[]}
         onupdatefiles={handleUploadFile}
         allowMultiple={false}
         name="files"
