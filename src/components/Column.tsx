@@ -29,31 +29,29 @@ export const Column: React.FC<ColumnProps> = ({ column, expenses, index }) => {
         snapshotDrag: DraggableStateSnapshot,
         rubicDrag: DraggableRubric
       ) => (
-        <div style={{ minWidth: 300, maxWidth: 300 }}>
-          <Droppable droppableId={column.id} type="expense">
-            {(
-              provided: DroppableProvided,
-              snapshot: DroppableStateSnapshot
-            ) => (
-              <div
-                className={
-                  snapshot.isDraggingOver
-                    ? "bg-white h-full border-2 rounded-xl border-2 rounded-xl border-sky-300"
-                    : "bg-white h-full border-2 rounded-xl"
-                }
-                {...providedDrag.draggableProps}
-                {...providedDrag.dragHandleProps}
-                ref={providedDrag.innerRef}
-              >
-                
-                <div className="text-center py-2 border-b-2">
+        <Droppable droppableId={column.id} type="expense">
+          {(provided: DroppableProvided, snapshot: DroppableStateSnapshot) => (
+            <div
+              className={
+                snapshot.isDraggingOver
+                  ? "bg-white h-full border-2 rounded-xl border-2 rounded-xl border-sky-300"
+                  : "bg-white h-full border-2 rounded-xl"
+              }
+              {...providedDrag.draggableProps}
+              ref={providedDrag.innerRef}
+            >
+              <div style={{ minWidth: 300, maxWidth: 300, minHeight: 200 }}>
+                <div
+                  {...providedDrag.dragHandleProps}
+                  className="text-center py-2 border-b-2"
+                >
                   <p className="text-md">{column.title}</p>
                 </div>
 
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
-                  className=" p-3 h-full"
+                  className="p-3"
                 >
                   {expenses.map((e, index) => (
                     <ItemColumn key={e.id} expense={e} index={index} />
@@ -61,9 +59,9 @@ export const Column: React.FC<ColumnProps> = ({ column, expenses, index }) => {
                   {provided.placeholder}
                 </div>
               </div>
-            )}
-          </Droppable>
-        </div>
+            </div>
+          )}
+        </Droppable>
       )}
     </Draggable>
   );

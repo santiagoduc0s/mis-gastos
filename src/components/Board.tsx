@@ -166,10 +166,8 @@ export function Board() {
       <div
         // className="w-full"
         style={{
-          // display: 'flex',
-          // flexDirection: 'row',
           overflowX: "scroll", // <-- Añade overflow-x aquí
-          overflowY: "hidden", // <-- Añade overflow-x aquí
+          // overflowY: "hidden", // <-- Añade overflow-x aquí
         }}
       >
         <Droppable
@@ -181,12 +179,9 @@ export function Board() {
             <div
               {...provided.droppableProps}
               ref={provided.innerRef}
-              // className="w-full"
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // overflowX: 'scroll',   // <-- Añade overflow-x aquí
-                // overflowY: 'hidden',   // <-- Añade overflow-x aquí
               }}
             >
               {board.columnOrder.map((columnId, index) => {
