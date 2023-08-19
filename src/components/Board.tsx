@@ -24,9 +24,9 @@ import {
   DraggableRubric,
 } from "@hello-pangea/dnd";
 import { useState } from "react";
-import { Expense } from "@/entities/entities";
-import { Board } from "@/shared/types/types";
-import { Column } from "@/components/components";
+import { Expense } from "@/entities";
+import { Board } from "@/shared/types";
+import { Column } from "@/components";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { setColumnOrder, setColumns } from "@/store/slices";
 
@@ -164,7 +164,7 @@ export function Board() {
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <div
-        className="w-full"
+        // className="w-full"
         style={{
           // display: 'flex',
           // flexDirection: 'row',
@@ -181,7 +181,7 @@ export function Board() {
             <div
               {...provided.droppableProps}
               ref={provided.innerRef}
-              className="w-full"
+              // className="w-full"
               style={{
                 display: "flex",
                 flexDirection: "row",

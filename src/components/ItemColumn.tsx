@@ -1,4 +1,4 @@
-import { Expense } from "@/entities/entities";
+import { Expense } from "@/entities";
 import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
 import React from "react";
 

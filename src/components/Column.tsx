@@ -1,7 +1,7 @@
-import { Expense } from "@/entities/entities";
-import { Column as ColumnParam } from "@/shared/types/types";
+import { Expense } from "@/entities";
+import { Column as ColumnParam } from "@/shared/types";
 import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
-import { ItemColumn } from "@/components/components";
+import { ItemColumn } from "@/components";
 
 import {
   DragDropContext,

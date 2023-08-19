@@ -3,3 +3,7 @@ export * from "@/components/Navigation";
 export * from "@/components/UploadFile";
 export * from "@/components/Column";
 export * from "@/components/ItemColumn";
+export * from "@/components/TableExpenses";
+export * from "@/components/PieChart";
+export * from "@/components/ColumnInput";
+export * from "@/components/SelectBank";

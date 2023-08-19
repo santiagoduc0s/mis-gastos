@@ -1,4 +1,4 @@
-import { Expense } from "@/entities/entities";
+import { Expense } from "@/entities";
 
 export class ExpenseMapper {
   static santanderRowToExpenseEntity(data: Array<string>): Expense {

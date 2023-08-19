@@ -1,5 +1,5 @@
 import { Expense } from "@/entities/Expense";
-import { Column } from "@/shared/types/types";
+import { Column } from "@/shared/types";
 
 export type Board = {
   expenses: {
